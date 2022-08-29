@@ -1,51 +1,57 @@
 :root {
-    --primary-color:#000000; 
-    --secondary-color :#14213D; 
-    --nav-text-color :#FCA311;
-    --darkligth-color :#E5E5E5;
-    --light-color : #FFFFFF;
+  --primary-color: #000000;
+  --secondary-color: #14213d;
+  --nav-text-color: #fca311;
+  --darkligth-color: #e5e5e5;
+  --light-color: #ffffff;
 }
-   
-@import url('https://fonts.googleapis.com/css?family=Poppins:900i');
-   
+
+@import url("https://fonts.googleapis.com/css?family=Poppins:900i");
+
 @font-face {
-  font-family: 'Albertus Medium';
+  font-family: "Albertus Medium";
   font-style: normal;
   font-weight: 400;
-  src: local('Albertus Medium'), url('https://fonts.cdnfonts.com/s/13715/Albertus Medium Regular.woff') format('woff');
+  src: local("Albertus Medium"),
+    url("https://fonts.cdnfonts.com/s/13715/Albertus Medium Regular.woff")
+      format("woff");
 }
 
 body {
+  height: 40vh;
   min-width: 400px;
+  background-image: url(../img/background-about.jpg);
 }
-   
+
 .flex-container {
+  z-index: 100 !important;
   display: flex;
-  background-color:var(--nav-text-color);
+  background-color: var(--nav-text-color);
   justify-content: space-evenly;
   align-items: center;
   box-shadow: 0px 0px 5px 5px var(--nav-text-color);
   height: 15vh;
   width: 100%;
+  /* margin-bottom: 0.35em; */
 }
-   
+
 .flex-container a {
-  font-family: 'Albertus Medium';
+  font-family: "Albertus Medium";
   text-decoration: none;
-  color:var(--primary-color);
+  color: var(--primary-color);
   font-size: 24px;
   display: flex;
   flex-wrap: wrap;
 }
-   
+
 .flex-container a:hover {
-  color: var(--darkligth-color);  
+  color: var(--darkligth-color);
 }
 
 .flex-logo img {
-  height: 15vh; 
+  height: 15vh;
 }
-   
+
 .menu {
   display: flex;
   flex-direction: row;
@@ -53,14 +59,15 @@ body {
   margin-right: -11%;
   padding: 0;
   flex-wrap: wrap;
+  z-index: 50;
 }
-   
+
 .menu > li {
   margin: 0 1rem;
   overflow: hidden;
   display: none;
 }
-   
+
 .menu-button-container {
   display: none;
   height: 100%;
@@ -70,11 +77,11 @@ body {
   justify-content: center;
   align-items: center;
 }
-   
+
 #menu-toggle {
   display: none;
 }
-   
+
 .menu-button,
 .menu-button::before,
 .menu-button::after {
@@ -88,46 +95,46 @@ body {
   border-radius: 2px;
   z-index: 100;
 }
-   
+
 .menu-button::before {
-  content: '';
+  content: "";
   margin-top: -8px;
 }
-   
+
 .menu-button::after {
-  content: '';
+  content: "";
   margin-top: 8px;
 }
-   
+
 #menu-toggle:checked + .menu-button-container .menu-button::before {
   margin-top: 0px;
   transform: rotate(405deg);
 }
-   
+
 #menu-toggle:checked + .menu-button-container .menu-button {
   background: rgba(255, 255, 255, 0);
 }
-   
+
 #menu-toggle:checked + .menu-button-container .menu-button::after {
   margin-top: 0px;
   transform: rotate(-405deg);
 }
-   
+
 #first {
-    background-image: url(../img/background-about.jpg);
-    height: 70vh;
-    display:flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  z-index: 1 !important;
+  padding-bottom: 20px;
 }
 
 #first h1 {
   margin-bottom: 2em;
   text-align: center;
   color: var(--nav-text-color);
-  font-family: 'Libre Baskerville', serif; /*'Albertus Medium' ou 'Roboto' 'Libre Baskerville'  */
+  font-family: "Libre Baskerville", serif; /*'Albertus Medium' ou 'Roboto' 'Libre Baskerville'  */
   font-size: 60px;
   text-shadow: 7px 0px 3px var(--primary-color);
 }
@@ -135,7 +142,7 @@ body {
 .center {
   margin-bottom: 8em;
   margin-top: 8em;
-  text-align:center;
+  text-align: center;
   padding-top: 120px;
   padding-left: 50px;
 }
@@ -145,93 +152,89 @@ body {
   box-shadow: 0px 0px 16px 16px var(--primary-color);
   height: 100%;
   width: 100%;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-content: center;
   z-index: 0;
 }
 
-
 .cadre {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 200px;
-    text-align: center;
-    background: black;
-    color: aliceblue;
-    font-family: 'Times New Roman', Times, serif
-
-}
-
-.centre {
-    display: flex;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  text-align: center;
+  background: black;
+  color: aliceblue;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .carousel {
-    display: flex;
-    width:100%;
-    height: 45px;
-    text-align: center;
-    font-size: 30px;
-    line-height: 45px;
-
+  display: flex;
+  width: 100%;
+  height: 45px;
+  text-align: center;
+  font-size: 30px;
+  line-height: 45px;
 }
 
 .carousel .text {
-    display: flex;
-    top:0;
-    padding-right: 14px;
-    height: 45px;
-    text-shadow:  1px 1px 1px white;
-    color: var(--nav-text-color);
+  display: flex;
+  top: 0;
+  padding-right: 14px;
+  height: 45px;
+  text-shadow: 1px 1px 1px white;
+  color: var(--nav-text-color);
 }
 
 .carousel .changeHidden {
-   position: relative;
-    top:0;
-    text-align: left;
-    height: 45px;
-    overflow: hidden;
+  position: relative;
+  top: 0;
+  text-align: left;
+  height: 45px;
+  overflow: hidden;
 }
 
 .carousel .changeHidden .contenant {
-    position: relative;
-    animation: carousel 8s ease-in-out infinite;
+  position: relative;
+  animation: carousel 8s ease-in-out infinite;
 }
 
 .carousel .changeHidden .element {
-    display: block;
-    font-weight: 700;
-    text-shadow: 1px 1px 1px white;
+  display: block;
+  font-weight: 700;
+  text-shadow: 1px 1px 1px white;
 }
 
 @keyframes carousel {
-    0%, 20% {
-        transform: translateY(0);
-    }
-    25%, 40% {
-        transform: translateY(-45px);
-    }
-    50%, 70% {
-        transform: translateY(-90px);
-    }
-    75%, 95% {
-        transform: translateY(-135px);
-    }
-    100%{
-        transform: translateY(-180px);
-    }
+  0%,
+  20% {
+    transform: translateY(0);
+  }
+  25%,
+  40% {
+    transform: translateY(-45px);
+  }
+  50%,
+  70% {
+    transform: translateY(-90px);
+  }
+  75%,
+  95% {
+    transform: translateY(-135px);
+  }
+  100% {
+    transform: translateY(-180px);
+  }
 }
 
 #second p {
   max-width: 64ch;
   color: var(--darkligth-color);
-  font-family:'Albertus Medium';
-  text-align:justify;
-  margin:0 auto;
+  font-family: "Albertus Medium";
+  text-align: justify;
+  margin: 0 auto;
   font-size: 20px;
   line-height: 1.5em;
   padding-top: 2em;
@@ -245,7 +248,7 @@ img {
 }
 
 .slider-container {
-  width:50rem;
+  width: 50rem;
   position: relative;
   margin: auto;
   height: 30rem;
@@ -273,11 +276,12 @@ img {
   margin: 0 0.2em 1em;
 }
 
-.menuSlide label:hover,.menuSlide label:focus {
+.menuSlide label:hover,
+.menuSlide label:focus {
   background: var(--nav-text-color);
 }
 
-.slide-input{
+.slide-input {
   opacity: 0;
 }
 
@@ -302,8 +306,6 @@ img {
 }
 
 /* SLIDE ENDING */
-   
-
 
 #footer {
   position: relative;
@@ -316,49 +318,45 @@ img {
   z-index: 10000;
   box-shadow: 0px 0px 5px 5px var(--nav-text-color);
 }
-   
+
 #footer0 {
   position: relative;
 }
-   
+
 #content-wrap {
   padding-bottom: 2.5rem;
 }
-    
+
 .logo-footer {
   margin: auto;
   height: 140px;
 }
-   
+
 .footer-box {
   margin: auto;
 }
-   
+
 .footer-box li a {
   color: var(--primary-color);
   text-decoration: none;
 }
-   
+
 .footer-box li a:hover {
   color: var(--darkligth-color);
 }
-   
+
 .boxlogo {
   display: flex;
 }
-   
+
 .footer-copyright {
-  color: var(--primary-color)
+  color: var(--primary-color);
 }
 
-
-
-
 @media (max-width: 1000px) {
- 
-  .flex-container { 
+  .flex-container {
     display: flex;
-    background-color:var(--nav-text-color);
+    background-color: var(--nav-text-color);
     justify-content: space-evenly;
     align-items: center;
     box-shadow: 0px 0px 5px 5px var(--nav-text-color);
@@ -367,13 +365,13 @@ img {
   }
 
   .flex-container a {
-    font-family: 'Albertus Medium';
+    font-family: "Albertus Medium";
     text-decoration: none;
-    color:var(--nav-text-color);
+    color: var(--nav-text-color);
     font-size: 16px;
     display: flex;
     flex-direction: row;
-    background-color:rgba(255, 255, 255, 0);
+    background-color: rgba(255, 255, 255, 0);
     font-size: 20px;
     flex-wrap: wrap;
   }
@@ -382,18 +380,21 @@ img {
     display: flex;
     align-items: center;
     height: 16vh;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
   }
-   
-  .menu-journal, .menu-carnet, .menu-about, .menu-contact {
+
+  .menu-journal,
+  .menu-carnet,
+  .menu-about,
+  .menu-contact {
     display: none;
   }
-    
+
   .menu-button-container {
     display: flex;
-    margin-bottom: 8%;    
+    margin-bottom: 8%;
   }
-    
+
   .menu {
     position: absolute;
     top: 0;
@@ -412,14 +413,14 @@ img {
     border: 0;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-      
+
   #menu-toggle:checked ~ .menu li {
     border: 1px solid #333;
     height: 2.5em;
     padding: 0.5em;
     transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
   }
-    
+
   .menu > li {
     display: flex;
     justify-content: center;
@@ -429,11 +430,11 @@ img {
     color: white;
     background-color: #222;
   }
-    
+
   .menu > li:not(:last-child) {
     border-bottom: 1px solid #444;
   }
-    
+
   #footer {
     font-size: 0.8rem;
     line-height: 1.5em;
@@ -441,14 +442,9 @@ img {
     flex-wrap: wrap;
   }
 
-
-
-
   #second p {
     font-size: 13px;
   }
-
- 
 
   .slider-container {
     max-width: 100%;
@@ -468,6 +464,4 @@ img {
   #first h1 {
     font-size: 40px;
   }
-
 }
-   
